@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  task-management:
+    image: postgres
+    restart: always
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+  test-task-management:
+    image: postgres
+    restart: always
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
